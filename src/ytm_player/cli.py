@@ -650,6 +650,7 @@ def config() -> None:
 # Play music by index
 # ---------------------------------------------------------------------------
 
+
 @main.command("play-index")
 @click.argument("index", type=int)
 def play_index(index: int) -> None:

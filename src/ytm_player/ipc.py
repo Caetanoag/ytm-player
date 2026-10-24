@@ -47,7 +47,7 @@ _VALID_COMMANDS = frozenset(
         "like",
         "dislike",
         "unlike",
-        "play_index"
+        "play_index",
     }
 )
 

@@ -7,6 +7,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ---
 
 ### Unreleased
+**New features**
+
+- **Jump to a queue position from the CLI** — `ytm play-index <n>` plays the track at 0-based position `<n>` in the current queue, backed by a new `play_index` IPC command. Enables external tools (overlays, launchers, scripts) that mirror the queue via `ytm queue` to select a specific track in one call, instead of looping through `next`/`prev` — which is slow for large jumps and unreliable for backwards navigation. Validates `0 <= n < queue.length` and returns a clear error otherwise. `self.queue.tracks[n]` respects the visible order, so it works correctly with shuffle enabled.
 
 **Fixes**
 
